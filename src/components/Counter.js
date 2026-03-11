@@ -23,6 +23,14 @@ const Counter = () => {
     store.dispatch({ type: 'decrement' });
   };
 
+  const incrementBy2Handler = () => {
+    store.dispatch({ type: 'INCREMENTBY2' });
+  };
+
+  const decrementBy2Handler = () => {
+    store.dispatch({ type: 'DECREMENTBY2' });
+  };
+
   const toggleCounterHandler = () => { };
 
   return (
@@ -32,6 +40,8 @@ const Counter = () => {
       <div>
         <button onClick={incrementHandler}>Increment</button>
         <button onClick={decrementHandler}>Decrement</button>
+        <button onClick={incrementBy2Handler}>Increment by 2</button>
+        <button onClick={decrementBy2Handler}>Decrement by 2</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
