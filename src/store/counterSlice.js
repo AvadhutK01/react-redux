@@ -1,0 +1,32 @@
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = { counter: 0 };
+
+const counterSlice = createSlice({
+    name: 'counter',
+    initialState,
+    reducers: {
+        increment(state) {
+            state.counter++;
+        },
+        decrement(state) {
+            state.counter--;
+        },
+        incrementBy2(state) {
+            state.counter += 2;
+        },
+        decrementBy2(state) {
+            state.counter -= 2;
+        },
+        incrementBy5(state) {
+            state.counter += 5;
+        },
+        decrementBy5(state) {
+            state.counter -= 5;
+        },
+    },
+});
+
+export const counterActions = counterSlice.actions;
+
+export default counterSlice.reducer;
